@@ -16,7 +16,8 @@ app.use(express.static(
 
 const indexPath  = path.resolve(__dirname, '..', 'build', 'index.html');
 // here we serve the index.html page
-app.get('/*', (req, res, next) => {
+app.get('/*', (req, res,) => {
+    console.log(req)
     fs.readFile(indexPath, 'utf8', (err, htmlData) => {
         if (err) {
             console.error('Error during file reading', err);

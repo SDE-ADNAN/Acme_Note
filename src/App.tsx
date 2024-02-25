@@ -1,6 +1,5 @@
 import './App.css'
 import Navbar from './components/navbar/Navbar';
-import heroImg from './assets/hero_img2.png'
 
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
             </div>
           </div>
           <div className='w-auto max-w-[1128px]'>
-            <img className='w-fit' src={heroImg} alt="hero_img" />
+            <img className='w-fit' src={"https://acme-note.b-cdn.net/hero_img2.png"} alt="hero_img" />
           </div>
         </div>
       </div>

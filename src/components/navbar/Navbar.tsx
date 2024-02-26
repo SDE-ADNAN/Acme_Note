@@ -1,3 +1,5 @@
+import Button from "../common/Button"
+
 const Navbar = () => {
   return (
         <div className='w-full backdrop-blur-sm bg-[#F3F3F3]/80  fixed top-0'>
@@ -7,7 +9,7 @@ const Navbar = () => {
                 <span className="font-extralight">&nbsp;Note</span>
             </div>
             <div className='flex-1'></div>
-            <div>-{">"}Start writing Notes</div>
+            <Button/>
             </div>
       </div>
   )

@@ -1,5 +1,7 @@
 import './App.css'
 import Navbar from './components/navbar/Navbar';
+import HeroSec from './components/herosec/HeroSec';
+import image1 from './assets/img1.webp'
 
 
 function App() {
@@ -7,17 +9,22 @@ function App() {
   return (
     <div className='main_app_container h-[100%] w-[100%] pt-[80px]'>
       <Navbar />
-      <div className='contents_container w-full max-w-[1250px] h-[80px] mx-auto '>
-        <div className='w-full herosec flex flex-col gap-20 items-center justify-center py-[80px]'>
-          <div className='child1'>
-            <div className='flex flex-col items-center'>
-              <div className='text-5xl font-bold'> Effortless Note-Taking. </div>
-              <div className='text-4xl font-light mt-[13px]'> Say Hello to Acme.</div>
-              <button className='bg-[#387ADF] w-fit text-white rounded-lg p-3 px-6 mt-11'> -{">"} Start Taking Notes</button>
+      <div className='contents_container w-full max-w-[1128px] h-[80px] mx-auto '>
+        <HeroSec />
+        <div className='about '>
+          <div className='row_1 flex items-center'>
+            <div className='Child1 w-auto max-w-[400px]'>
+              <div className='text-4xl font-extrabold'>
+                A handwriting experience like no other.
+              </div>
+              <div className='text-xl font-light tracking-wide'>
+                Fall in love with handwriting all over again with Goodnotes’ digital ink. ❤️ by millions of people worldwide.
+              </div>
             </div>
-          </div>
-          <div className='w-auto max-w-[1128px]'>
-            <img className='w-fit' src={"https://acme-note.b-cdn.net/hero_img2.png"} alt="hero_img" />
+            <div className='child2 flex-1'></div>
+            <div className='image w-auto max-w-[508px]'>
+              <img className='rounded'src={image1}></img>
+            </div>
           </div>
         </div>
       </div>

@@ -2,17 +2,21 @@ import './App.css'
 import Navbar from './components/navbar/Navbar';
 import HeroSec from './components/herosec/HeroSec';
 import About from './components/aboutsec/About';
+import ProductivityCTA from './components/productivityCTA/ProductivityCTA';
+import Footer from './components/footer/Footer';
 
 
 function App() {
 
   return (
-    <div className='main_app_container h-[100%] w-[100%] pt-[80px]'>
+    <div className='h-[100vh] w-[100vw] pt-[80px]'>
       <Navbar />
-      <div className='contents_container w-full max-w-[1128px] h-[80px] mx-auto '>
+      <div className='w-full max-w-[1225px] mx-auto '>
         <HeroSec />
-        <About/>
+        <About />
+        <ProductivityCTA/>
       </div>
+        <Footer/>
     </div>
   )
 }

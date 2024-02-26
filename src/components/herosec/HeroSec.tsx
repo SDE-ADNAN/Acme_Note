@@ -7,7 +7,7 @@ const HeroSec = () => {
         <div className='w-full herosec flex flex-col gap-20 items-center justify-center py-[80px]'>
             <div className='child1'>
                 <div className='flex flex-col items-center'>
-                    <div className='text-5xl font-bold'> Effortless Note-Taking. </div>
+                    <div className='text-5xl font-bold sm:text-3xl'> Effortless Note-Taking. </div>
                     <div className='text-4xl font-light mt-[13px]'> Say Hello to Acme.</div>
                     <Button className='mt-11' />
                 </div>

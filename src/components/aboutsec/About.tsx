@@ -37,7 +37,7 @@ const RowItem = (props: RowItemProps) => {
             </div>
             <div className='child2 flex-1'></div>
             <div className='image w-auto max-w-[508px]'>
-                <img className='rounded' src={props.image}></img>
+                <img className='rounded-2xl' src={props.image}></img>
             </div>
         </div>
     )

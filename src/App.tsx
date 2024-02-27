@@ -11,7 +11,7 @@ function App() {
   return (
     <div className='h-[100vh] w-[100vw] pt-[80px]'>
       <Navbar />
-      <div className='w-full max-w-[1225px] mx-auto '>
+      <div className='w-full max-w-[1225px] mx-auto min-[0px]:p-4 max-[1350px]:p-0'>
         <HeroSec />
         <About />
         <ProductivityCTA/>

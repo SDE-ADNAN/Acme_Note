@@ -26,7 +26,7 @@ const RowData: RowItemProps[] = [
 
 const RowItem = (props: RowItemProps) => {
     return (
-        <div className={`row_1 flex ${props.reverse? "flex-row-reverse":""} items-center py-12`}>
+        <div className={`row_1 flex flex-col  gap-10 lg:gap-0 ${!props.reverse? "lg:flex-row":""} ${props.reverse? "lg:flex-row-reverse":""} items-center py-12`}>
             <div className='Child1 w-auto max-w-[400px]'>
                 <div className='text-4xl font-extrabold'>
                     {props.title}

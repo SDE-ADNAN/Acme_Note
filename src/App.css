@@ -1,8 +1,7 @@
-.navbg{
-  background: rgb(49 83 221 / 74%);
-  box-shadow: 0 -1px 6px 0px rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+body{
+  background-color: #fafafa;
+}
+
+.main_navbar_z{
+  z-index:100000;
 }

@@ -6,20 +6,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Ipad = () => {
     const container = useRef(null);
+    const image = useRef(null);
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".img", // start the animation when ".img" enters the viewport (once)
-                start: 'bottom bottom',
-                end: 'top 50%',
+                trigger: image.current, // start the animation when ".img" enters the viewport (once)
+                start: '25% 90%',
+                end: '40% 30%',
                 scrub: 4,
-                markers: true,
-                pin: true,
+                // markers: true,
             },
-            x:'100px',
-            duration:1,
         });
         // const tl2 = gsap.timeline({
         //     scrollTrigger: {
@@ -33,7 +31,7 @@ const Ipad = () => {
         //     x:'100px',
         //     duration:3,
         // });
-        tl.fromTo(".img", {scale: 1.4,opacity:0, y:-500},  {scale: 0.8,opacity:1, duration: 3 ,y:0, ease: "power4.inOut"});
+        tl.fromTo(image.current, { scale: 1.4, opacity: 0, y: -100 }, { scale: 0.8, opacity: 1, duration: 2, y: 0, ease: "power4.inOut" });
         // tl2.fromTo(".text_heading", {scale: 1.4,opacity:0},  {scale: 0.8,opacity:1, duration: 3, ease: "power4.inOut"});
 
     }, { scope: container });
@@ -44,8 +42,8 @@ const Ipad = () => {
                 Take full <span className='text-[#387ADF]'>Advantage </span> Of <span className='text-[#387ADF]'>Apple Ipad </span>
                 and <span className='text-[#387ADF]'> 🍏✏️ Apple Pencil</span>.<br />
             </div>
-            <div className=' relative overlay w-auto max-w-[1000px] mt-2' >
-                <img className='relative inset-0 img w-fit h-full -z-10' src={ipadImg} alt="hero_img" />
+            <div className=' relative overlay w-auto max-w-[900px] mt-2' >
+                <img className='relative inset-0 img w-fit h-full -z-10' ref={image} src={ipadImg} alt="hero_img" />
             </div>
         </div>
     )

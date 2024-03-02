@@ -3,7 +3,7 @@ import React from 'react'
 
 const ProductivityCTA = () => {
     return (
-        <div className='flex flex-col items-center py-36'>
+        <div className='py-8 flex flex-col items-center md:py-36'>
             <div className='text-5xl tracking-wide text-center w-full max-w-[700px] font-[900]'>
                 Your <span className='text-[#387ADF]'>Productivity</span> Awaits!
                 Start Note-Taking Today</div>

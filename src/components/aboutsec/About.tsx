@@ -1,4 +1,9 @@
+import { useRef } from 'react';
 import image1 from '../../assets/img1.webp';
+import { useGSAP } from '@gsap/react';
+import splitType from 'split-type';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 type RowItemProps = {
     title: string,
@@ -25,13 +30,42 @@ const RowData: RowItemProps[] = [
 ]
 
 const RowItem = (props: RowItemProps) => {
+    const container = useRef(null);
+    useGSAP(() => {
+        const ourText = new splitType('.heading_txt__about', { types: 'words' })
+        const words = ourText.words
+        gsap.registerPlugin(ScrollTrigger);
+        // gsap.fromTo('.text_heading_hero', {opacity:0, y:+100},  {opacity:1, duration: 1 ,y:0, ease: "power4.easeInOut"});
+        // gsap.fromTo('.hero_img', {opacity:0},  {opacity:1, duration: 2 , ease: "power4.easeInOut"});
+        
+        gsap.fromTo(
+            words,
+            {
+                y: 100,
+                opacity: 0
+            },
+            {
+                y: 0,
+                opacity: 1,
+                stagger: 0.05,
+                duration: 1,
+                ease: 'power4.out',
+                scrollTrigger: {
+                    trigger: container.current,
+                    start: "-50% 100%",
+                    end: "60% 70%",
+                    scrub: 4,
+                }
+            },
+        )
+    }, { scope: container });
     return (
-        <div className={`row_1 flex flex-col  gap-10 lg:gap-0 ${!props.reverse? "lg:flex-row":""} ${props.reverse? "lg:flex-row-reverse":""} items-center py-12`}>
+        <div className={`row_1 flex flex-col  gap-10 lg:gap-0 ${!props.reverse? "lg:flex-row":""} ${props.reverse? "lg:flex-row-reverse":""} items-center py-12`} ref={container}>
             <div className='Child1 w-auto max-w-[400px]'>
-                <div className='text-4xl font-extrabold'>
+                <div className='heading_txt__about text-4xl font-extrabold'>
                     {props.title}
                 </div>
-                <div className='text-xl font-light tracking-wide'>
+                <div className='heading_txt__about text-xl font-light tracking-wide'>
                     {props.description}
                 </div>
             </div>

@@ -4,7 +4,8 @@ const Footer = () => {
             <div className="w-full max-w-[1225px] mx-auto flex justify-center flex-col gap-10 md:flex-row md:gap-0">
                 <div className='text-[36px] flex-1'>
                     <span className="text-[#387ADF] font-[900]">Acme</span>
-                    <span className="font-extralight">&nbsp;Note</span>
+                    <span className="font-extralight">&nbsp;Note
+                        📝</span>
                 </div>
                 <div className="text-white flex flex-row gap-16 items-end">
                     <div className=" flex flex-col gap-2">

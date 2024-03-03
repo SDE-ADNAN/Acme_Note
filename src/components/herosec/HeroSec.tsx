@@ -34,8 +34,8 @@ const HeroSec = () => {
         <div className='w-full herosec flex flex-col gap-20 items-center justify-center py-[80px]' ref={container}>
             <div className='child1'>
                 <div className='container text_heading_hero flex flex-col items-center'>
-                    <div className='heading_txt__hero overflow-hidden text-5xl text-center font-bold sm:text-5xl'> Effortless Note-Taking. </div>
-                    <div className=' heading_txt__hero overflow-hidden text-4xl font-light mt-[13px]'> Say Hello to Acme.</div>
+                    <div className='heading_txt__hero overflow-hidden text-5xl text-center font-bold sm:text-5xl'>📝 Effortless Note-Taking. 🖐️</div>
+                    <div className=' heading_txt__hero overflow-hidden text-4xl font-light mt-[13px]'>Say Hello to Acme.👋</div>
                     <Button className='mt-11' />
                 </div>
             </div>

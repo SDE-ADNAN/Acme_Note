@@ -45,7 +45,7 @@ const useCustomGSAP = (containerRef:React.RefObject<HTMLDivElement>,headingTextS
                     start: "top 80%",
                     end: "bottom 70%",
                     scrub: 4,
-                    markers: true
+                    // markers: true
                 }
             },
         )

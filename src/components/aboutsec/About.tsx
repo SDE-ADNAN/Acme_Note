@@ -33,10 +33,13 @@ const RowData: RowItemProps[] = [
 
 
 const About = () => {
+
+    // refs for the containers
     const container1 = useRef(null);
     const container2 = useRef(null);
     const container3 = useRef(null);
 
+    // made custom hook to animate the text and image as it was voilating DRY principle
     useCustomGSAP(container1,'.heading_txt__about__1',".about_img_1",false);
     useCustomGSAP(container2,'.heading_txt__about__2',".about_img_2",true);
     useCustomGSAP(container3,'.heading_txt__about__3',".about_img_3",false);
@@ -58,7 +61,6 @@ const About = () => {
                     <img className='rounded-2xl ' src={RowData[0].image}></img>
                 </div>
             </div>
-
 
             <div className={`row_2 flex flex-col  gap-10 lg:gap-0 ${!RowData[1].reverse ? "lg:flex-row" : ""} ${RowData[1].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} ref={container2}>
                 <div className={`Child_ w-auto max-w-[400px]`} >

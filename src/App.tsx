@@ -11,7 +11,7 @@ import Ipad from './components/Ipad/Ipad';
 function App() {
 
   return (
-    <div id={"container__main_"} className='h-[100vh] w-[100vw] pt-[80px] bg-[#fafafa]'>
+    <div id={"container__main_"} className=' w-[100vw] overflow-x-hidden pt-[80px] bg-[#fafafa]'>
       <Navbar />
       <div className='w-full max-w-[1225px] mx-auto min-[0px]:p-4 max-[1350px]:p-0'>
         <HeroSec />

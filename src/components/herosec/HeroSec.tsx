@@ -12,7 +12,6 @@ const HeroSec = () => {
         const ourText = new splitType('.heading_txt__hero', { types: 'words' })
         const words = ourText.words
         gsap.registerPlugin(ScrollTrigger);
-        // gsap.fromTo('.text_heading_hero', {opacity:0, y:+100},  {opacity:1, duration: 1 ,y:0, ease: "power4.easeInOut"});
         gsap.fromTo('.hero_img', {opacity:0},  {opacity:1, duration: 2 , ease: "power4.easeInOut"});
         gsap.fromTo(
             words,
@@ -34,7 +33,7 @@ const HeroSec = () => {
         <div className='w-full herosec flex flex-col gap-20 items-center justify-center py-[80px]' ref={container}>
             <div className='child1'>
                 <div className='container text_heading_hero flex flex-col items-center'>
-                    <div className='heading_txt__hero overflow-hidden text-5xl text-center font-bold sm:text-5xl'>📝 Effortless Note-Taking. 🖐️</div>
+                    <div className='heading_txt__hero overflow-hidden text-4xl text-center font-bold sm:text-5xl'>📝 Effortless Note-Taking. 🖐️</div>
                     <div className=' heading_txt__hero overflow-hidden text-4xl font-light mt-[13px]'>Say Hello to Acme.👋</div>
                     <Button className='mt-11' />
                 </div>

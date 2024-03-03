@@ -1,6 +1,6 @@
 # README For All Neccessary Info.
 
-Deployed on `https://acme-note.netlify.app`
+Deployed on https://acme-note.netlify.app
 
 ---
 ### A basic overview of your project.
@@ -38,5 +38,6 @@ Before doing anything and using best practices my load time measured using light
 
 ### Any optimizations you did to decrease the load time or increase page performance.
 
-- on it
+#### Step1 making all images into webp images.
+
 

@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import ipadImg from '../../assets/ipad.png';
+import ipadImg from '../../assets/ipad.webp';
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

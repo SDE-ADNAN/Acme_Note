@@ -1,4 +1,4 @@
-import loginImg from "../../assets/login.png"
+import loginImg from "../../assets/login.webp"
 
 interface ButtonProps {
     className?: string

@@ -1,5 +1,5 @@
 import Button from '../common/Button'
-import heroImg from '../../assets/hero_img2.png'
+import heroImg from '../../assets/hero_img2.webp'
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';

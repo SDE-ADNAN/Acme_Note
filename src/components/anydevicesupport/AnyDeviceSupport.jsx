@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import anyDeviceImg from '../../assets/Apple-Freeform-hero_big.jpg'
+import anyDeviceImg from '../../assets/apple_hero.webp'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

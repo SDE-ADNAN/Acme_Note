@@ -35,14 +35,17 @@ const RowItem = (props: RowItemProps) => {
         const ourText = new splitType('.heading_txt__about', { types: 'words' })
         const words = ourText.words
         gsap.registerPlugin(ScrollTrigger);
-        // gsap.fromTo('.text_heading_hero', {opacity:0, y:+100},  {opacity:1, duration: 1 ,y:0, ease: "power4.easeInOut"});
-        // gsap.fromTo('.hero_img', {opacity:0},  {opacity:1, duration: 2 , ease: "power4.easeInOut"});
-        
         gsap.fromTo(
             words,
             {
                 y: 100,
-                opacity: 0
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: container.current,
+                    start: "-50% 100%",
+                    end: "60% 70%",
+                    scrub: 4,
+                }
             },
             {
                 y: 0,

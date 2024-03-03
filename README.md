@@ -38,6 +38,16 @@ Before doing anything and using best practices my load time measured using light
 
 ### Any optimizations you did to decrease the load time or increase page performance.
 
-#### Step1 making all images into webp images.
+#### Step1 making all images into webp images. ( Affected Performance metric ).
+- Performance is at --> `97%`.`( 2% optimized )`
+  - Performance metrices are as below.
+    - FCP (First Contentful Paint) is at --> `1.4sec`.
+    - Speed Index is at --> `1.9sec`.
+    - LCP (Largest Contentful Paint) is at --> `1.7sec`. `(29.2% optimized )`
+    - Time to Interactive is at --> `1.6sec`.
+    - TBT (Total Blocking Time) is at --> `190ms`.
+    - Cumulative Layout Shift is at --> `0.043`.
+
+### step2 making all images available through CDN. 
 
 

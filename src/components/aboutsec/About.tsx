@@ -10,14 +10,17 @@ type RowItemProps = {
     description: string;
     image: string;
     reverse?: boolean;
+    index?: number;
+    refItem?: React.RefObject<HTMLDivElement>;
 }
 
 const RowData: RowItemProps[] = [
+    // {
+    //     title: 'A handwriting experience like no other.',
+    //     description: 'Fall in love with handwriting all over again with Goodnotes’ digital ink. ❤️ by millions of people worldwide.',
+    //     image: image1
+    // }, 
     {
-        title: 'A handwriting experience like no other.',
-        description: 'Fall in love with handwriting all over again with Goodnotes’ digital ink. ❤️ by millions of people worldwide.',
-        image: image1
-    }, {
         title: 'Write freely on paper that recognizes every typo.',
         description: 'Powerful AI features like Spellcheck and Word Complete fix your mistakes, so you can focus on getting your ideas on the page.',
         image: image1,
@@ -29,23 +32,20 @@ const RowData: RowItemProps[] = [
     }
 ]
 
-const RowItem = (props: RowItemProps) => {
-    const container = useRef(null);
+
+const About = () => {
+    const container1 = useRef(null);
+    const container2 = useRef(null);
+
     useGSAP(() => {
-        const ourText = new splitType('.heading_txt__about', { types: 'words' })
-        const words = ourText.words
+        const ourText1 = new splitType('.heading_txt__about__1', { types: 'words' })
+        const words1 = ourText1.words
         gsap.registerPlugin(ScrollTrigger);
         gsap.fromTo(
-            words,
+            words1,
             {
                 y: 100,
                 opacity: 0,
-                scrollTrigger: {
-                    trigger: container.current,
-                    start: "-50% 100%",
-                    end: "60% 70%",
-                    scrub: 4,
-                }
             },
             {
                 y: 0,
@@ -54,37 +54,78 @@ const RowItem = (props: RowItemProps) => {
                 duration: 1,
                 ease: 'power4.out',
                 scrollTrigger: {
-                    trigger: container.current,
-                    start: "-50% 100%",
-                    end: "60% 70%",
+                    trigger: container1.current,
+                    start: "top 80%",
+                    end: "bottom 70%",
                     scrub: 4,
+                    // markers: true
                 }
             },
         )
-    }, { scope: container });
-    return (
-        <div className={`row_1 flex flex-col  gap-10 lg:gap-0 ${!props.reverse? "lg:flex-row":""} ${props.reverse? "lg:flex-row-reverse":""} items-center py-12`} ref={container}>
-            <div className='Child1 w-auto max-w-[400px]'>
-                <div className=' overflow-hidden heading_txt__about text-4xl font-extrabold'>
-                    {props.title}
-                </div>
-                <div className='overflow-hidden heading_txt__about text-xl font-light tracking-wide'>
-                    {props.description}
-                </div>
-            </div>
-            <div className='child2 flex-1'></div>
-            <div className='image w-auto max-w-[508px]'>
-                <img className='rounded-2xl' src={props.image}></img>
-            </div>
-        </div>
-    )
-}
 
-const About = () => {
+        
+    }, { scope:container1});
+    useGSAP(() => {
+        const ourText2 = new splitType('.heading_txt__about__2', { types: 'words' })
+        const words2 = ourText2.words
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(
+            words2,
+            {
+                y: 100,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                stagger: 0.05,
+                duration: 1,
+                ease: 'power4.out',
+                scrollTrigger: {
+                    trigger: container2.current,
+                    start: "top 80%",
+                    end: "bottom 70%",
+                    scrub: 4,
+                    // markers: true
+                }
+            },
+        )
+
+        
+    }, { scope:container2});
+
     return (
         <div className='about '>
-            {RowData.map((item, index) =>
-                <RowItem key={index} {...item} />)}
+            <div className={`row_1 flex flex-col  gap-10 lg:gap-0 ${!RowData[0].reverse ? "lg:flex-row" : ""} ${RowData[0].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} >
+                <div className={`Child_ w-auto max-w-[400px]`} ref={container1}>
+                    <div className={`overflow-hidden heading_txt__about__1 text-4xl font-extrabold`} >
+                        {RowData[0].title}
+                    </div>
+                    <div className={`overflow-hidden heading_txt__about__1 text-xl font-light tracking-wide`}>
+                        {RowData[0].description}
+                    </div>
+                </div>
+                <div className='child2 flex-1'></div>
+                <div className='image w-auto max-w-[508px]'>
+                    <img className='rounded-2xl ' src={RowData[0].image}></img>
+                </div>
+            </div>
+
+
+            <div className={`row_2 flex flex-col  gap-10 lg:gap-0 ${!RowData[1].reverse ? "lg:flex-row" : ""} ${RowData[1].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} >
+                <div className={`Child_ w-auto max-w-[400px]`} ref={container2}>
+                    <div className={`overflow-hidden heading_txt__about__2 text-4xl font-extrabold`} >
+                        {RowData[1].title}
+                    </div>
+                    <div className={`overflow-hidden heading_txt__about__2 text-xl font-light tracking-wide`}>
+                        {RowData[1].description}
+                    </div>
+                </div>
+                <div className='child2 flex-1'></div>
+                <div className='image w-auto max-w-[508px]'>
+                    <img className='rounded-2xl ' src={RowData[1].image}></img>
+                </div>
+            </div>
         </div>
     )
 }

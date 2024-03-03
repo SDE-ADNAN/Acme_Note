@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import Button from "../common/Button"
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
 const Navbar = () => {
@@ -10,7 +9,6 @@ const Navbar = () => {
   const note = useRef(null);
 
   useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(acme.current, {opacity:0, y:-10},  {opacity:1, duration: 1 ,y:0, ease: "power4.easeInOut"});
     gsap.fromTo(note.current, {opacity:0},  {opacity:1, duration: 2 , ease: "power4.easeInOut"});
 }, { scope: container });
@@ -23,7 +21,7 @@ const Navbar = () => {
           <span className="note font-extralight" ref={note}>&nbsp;Note</span>
         </div>
         <div className='hidden sm:block flex-1'></div>
-        <Button className="hidden md:flex" textClassName="" />
+        <Button className="hidden md:flex" />
       </div>
     </div>
   )

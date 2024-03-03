@@ -9,13 +9,13 @@ import splitType from 'split-type';
 const HeroSec = () => {
     const container = useRef(null);
     useGSAP(() => {
-        const ourText = new splitType('.heading_txt__hero', { types: 'chars' })
-        const chars = ourText.chars
+        const ourText = new splitType('.heading_txt__hero', { types: 'words' })
+        const words = ourText.words
         gsap.registerPlugin(ScrollTrigger);
         // gsap.fromTo('.text_heading_hero', {opacity:0, y:+100},  {opacity:1, duration: 1 ,y:0, ease: "power4.easeInOut"});
         gsap.fromTo('.hero_img', {opacity:0},  {opacity:1, duration: 2 , ease: "power4.easeInOut"});
         gsap.fromTo(
-            chars,
+            words,
             {
                 y: 100,
                 opacity: 0

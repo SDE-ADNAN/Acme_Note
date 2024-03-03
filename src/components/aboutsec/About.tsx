@@ -65,10 +65,10 @@ const RowItem = (props: RowItemProps) => {
     return (
         <div className={`row_1 flex flex-col  gap-10 lg:gap-0 ${!props.reverse? "lg:flex-row":""} ${props.reverse? "lg:flex-row-reverse":""} items-center py-12`} ref={container}>
             <div className='Child1 w-auto max-w-[400px]'>
-                <div className='heading_txt__about text-4xl font-extrabold'>
+                <div className=' overflow-hidden heading_txt__about text-4xl font-extrabold'>
                     {props.title}
                 </div>
-                <div className='heading_txt__about text-xl font-light tracking-wide'>
+                <div className='overflow-hidden heading_txt__about text-xl font-light tracking-wide'>
                     {props.description}
                 </div>
             </div>

@@ -32,7 +32,7 @@ const AnyDeviceSupport = () => {
                 <span className='text-2xl font-medium'> Supported on all <span className='text-[#387ADF]'> OS </span> and <span className='text-[#387ADF]'>Browsers</span>.</span>
             </div>
             <div className='relative w-auto max-w-[1128px]' ref={container}>
-                <img className='relative w-fit -z-10' ref={image} src={anyDeviceImg} alt="hero_img" />
+                <img className='relative w-fit z-0' ref={image} src={anyDeviceImg} alt="hero_img" />
             </div>
         </div>
     )

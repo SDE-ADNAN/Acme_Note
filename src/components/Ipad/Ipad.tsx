@@ -29,7 +29,7 @@ const Ipad = () => {
                 and <span className='text-[#387ADF]'> 🍏✏️ Apple Pencil</span>.<br />
             </div>
             <div className=' relative overlay w-auto max-w-[900px] mt-2' >
-                <img className='relative inset-0 img w-fit h-full -z-10' ref={image} src={ipadImg} alt="hero_img" />
+                <img className='relative inset-0 img w-fit h-full z-0' ref={image} src={ipadImg} alt="hero_img" />
             </div>
         </div>
     )

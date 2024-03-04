@@ -1,18 +1,22 @@
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import assetsConfig from '../../assets';
+import { useGSAP } from "@gsap/react"; // gsap hook for animation
+import gsap from 'gsap'; // gsap object import
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; // scrollTrigger plugin import for scroll animations
+import { useRef } from 'react'; // react useRef hook import
+import assetsConfig from '../../assets'; // assets urls object
 
+// Ipad component entry point
 const Ipad = () => {
+
+    // useRef hook for the container and image
     const container = useRef(null);
     const image = useRef(null);
 
+    // all gsap and scrollTrigger animations are handled here
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: image.current, // start the animation when ".img" enters the viewport (once)
+                trigger: image.current,
                 start: '-20% 90%',
                 end: '20% 30%',
                 scrub: 4,

@@ -1,15 +1,15 @@
-import './App.css'
-import Navbar from './components/navbar/Navbar';
-import HeroSec from './components/herosec/HeroSec';
-import About from './components/aboutsec/About';
-import ProductivityCTA from './components/productivityCTA/ProductivityCTA';
-import Footer from './components/footer/Footer';
-import AnyDeviceSupport from './components/anydevicesupport/AnyDeviceSupport';
-import Ipad from './components/Ipad/Ipad';
+import './App.css'; // Importing the main css file
+import Ipad from './components/Ipad/Ipad'; // Ipad component import
+import About from './components/aboutsec/About'; // About component import
+import AnyDeviceSupport from './components/anydevicesupport/AnyDeviceSupport'; // AnyDeviceSupport component import
+import Footer from './components/footer/Footer'; // Footer component import
+import HeroSec from './components/herosec/HeroSec'; // HeroSec component import
+import Navbar from './components/navbar/Navbar'; // Navbar component import
+import ProductivityCTA from './components/productivityCTA/ProductivityCTA'; // ProductivityCTA component import
 
 
-function App() {
-
+// App component entry point
+const App = () => {
   return (
     <div id={"container__main_"} className=' w-[100vw] overflow-x-hidden pt-[80px] bg-[#fafafa]'>
       <Navbar />
@@ -25,4 +25,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

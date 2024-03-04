@@ -1,22 +1,29 @@
-import SplitType from 'split-type';
-import Button from '../common/Button'
-import React from 'react'
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from '@gsap/react'; // useGSAP hook import from gsap.
+import gsap from 'gsap'; // gsap object import
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; // gsap plugin for scroll animation handling
+import { useRef } from 'react'; // react specific imports
+import SplitType from 'split-type'; // splitType library for text spliting into child dom nodes.
+import Button from '../common/Button'; // Button component import
 
+// ProductivityCTA component entry point
 const ProductivityCTA = () => {
-    const container = React.useRef(null);
+
+    // useRef hook for the container
+    const container = useRef(null);
+
+    // useGSAP hook for the animation
     useGSAP(() => {
         const ourText1 = new SplitType('.productivity__txt', { types: 'words' })
         const words1 = ourText1.words
         gsap.registerPlugin(ScrollTrigger);
         gsap.fromTo(
             words1,
+            // animate from
             {
                 y: 100,
                 opacity: 0,
             },
+            // animate to
             {
                 y: 0,
                 opacity: 1,
@@ -28,13 +35,11 @@ const ProductivityCTA = () => {
                     start: "top 80%",
                     end: "bottom 70%",
                     scrub: 4,
-                    // markers: true
                 }
             },
         )
-
-        
     }, { scope:container});
+    
     return (
         <div className='py-8 flex flex-col items-center md:py-36'>
             <div className='text-4xl tracking-wide text-center w-full max-w-[700px] font-[900] md:text-5xl'  >
@@ -47,4 +52,4 @@ const ProductivityCTA = () => {
     )
 }
 
-export default ProductivityCTA
+export default ProductivityCTA;

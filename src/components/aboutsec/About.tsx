@@ -1,7 +1,9 @@
-import { useRef } from 'react';
-import useCustomGSAP from '../../hooks/useCustomGSAP';
-import assetsConfig from '../../assets';
+import { useRef } from 'react'; // react specific imports
+import assetsConfig from '../../assets'; // assets urls object
+import useCustomGSAP from '../../hooks/useCustomGSAP'; // custom hook for gsap repeated code
 
+
+// Props for the row in about section
 type RowItemProps = {
     title: string,
     description: string;
@@ -11,6 +13,7 @@ type RowItemProps = {
     refItem?: React.RefObject<HTMLDivElement>;
 }
 
+// Data for the rows in about section
 const RowData: RowItemProps[] = [
     {
         title: '✍️ A handwriting experience like no other. 🌟',
@@ -30,8 +33,8 @@ const RowData: RowItemProps[] = [
 ]
 
 
+// about section component entry point.
 const About = () => {
-
     // refs for the containers
     const container1 = useRef(null);
     const container2 = useRef(null);
@@ -45,8 +48,8 @@ const About = () => {
 
     // TODO: Handle DRY principle here
     return (
-        <div className='about '>
-            <div className={`row_1 flex flex-col  gap-10 lg:gap-0 ${!RowData[0].reverse ? "lg:flex-row" : ""} ${RowData[0].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} ref={container1}>
+        <ul className='about '>
+            <li className={`row_1 flex flex-col  gap-10 lg:gap-0 ${!RowData[0].reverse ? "lg:flex-row" : ""} ${RowData[0].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} ref={container1}>
                 <div className={`Child_ w-auto max-w-[400px]`} >
                     <div className={`overflow-hidden heading_txt__about__1 text-4xl font-extrabold`} >
                         {RowData[0].title}
@@ -59,9 +62,9 @@ const About = () => {
                 <div className='about_img_1 w-auto max-w-[508px]'>
                     <img className='rounded-2xl ' src={RowData[0].image} alt={"about_img_1"}></img>
                 </div>
-            </div>
+            </li>
 
-            <div className={`row_2 flex flex-col  gap-10 lg:gap-0 ${!RowData[1].reverse ? "lg:flex-row" : ""} ${RowData[1].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} ref={container2}>
+            <li className={`row_2 flex flex-col  gap-10 lg:gap-0 ${!RowData[1].reverse ? "lg:flex-row" : ""} ${RowData[1].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} ref={container2}>
                 <div className={`Child_ w-auto max-w-[400px]`} >
                     <div className={`overflow-hidden heading_txt__about__2 text-4xl font-extrabold`} >
                         {RowData[1].title}
@@ -74,9 +77,9 @@ const About = () => {
                 <div className='about_img_2 image w-auto max-w-[508px]'>
                     <img className='rounded-2xl ' src={RowData[1].image} alt={"about_img_1"} ></img>
                 </div>
-            </div>
+            </li>
 
-            <div className={`row_2 flex flex-col  gap-10 lg:gap-0 ${!RowData[2].reverse ? "lg:flex-row" : ""} ${RowData[2].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} ref={container3}>
+            <li className={`row_2 flex flex-col  gap-10 lg:gap-0 ${!RowData[2].reverse ? "lg:flex-row" : ""} ${RowData[2].reverse ? "lg:flex-row-reverse" : ""} items-center py-12`} ref={container3}>
                 <div className={`Child_ w-auto max-w-[400px]`} >
                     <div className={`overflow-hidden heading_txt__about__3 text-4xl font-extrabold`} >
                         {RowData[2].title}
@@ -89,9 +92,9 @@ const About = () => {
                 <div className='about_img_3 image w-auto max-w-[508px]'>
                     <img className='rounded-2xl ' src={RowData[2].image} alt={"about_img_1"} ></img>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     )
 }
 
-export default About
+export default About;

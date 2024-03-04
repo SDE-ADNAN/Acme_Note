@@ -1,3 +1,4 @@
+// Assets Config for type of CDN of images 
 const assetsConfig = {
     images: {
         loginImg: 'https://i.ibb.co/bQ7c5pm/login.webp',

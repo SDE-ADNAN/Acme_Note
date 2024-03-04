@@ -58,6 +58,30 @@ Before doing anything and using best practices my load time measured using light
     - TBT (Total Blocking Time) is at --> `70ms`.` 63% optimized `
     - Cumulative Layout Shift is at --> `0.043`.
 
-### working on accessibility metric as its at 75%.
-- 
+### step3 working on accessibility metric as its at 75%.
+- after all of the changes like alt attribute in images and aria-label on buttons 
+- Now all metrices look like this.
+- Performance is at --> `97%`.
+  - Performance metrices are as below.
+    - FCP (First Contentful Paint) is at --> `1.4sec`.
+    - Speed Index is at --> `1.9sec`.
+    - LCP (Largest Contentful Paint) is at --> `1.7sec`.
+    - Time to Interactive is at --> `1.6sec`.
+    - TBT (Total Blocking Time) is at --> `70ms`.
+    - Cumulative Layout Shift is at --> `0.043`.
+- Accessibility is at --> `96%`. `11% optimized`
+- Best Practices is at --> `92%`.
+- SEO is at --> `92%`. `9% optimized`
+- PWA ( Progressive Web App ) - `none`.
+
+
+### for better sharing of results I also ran a test on GTmetrix.com and the result is as below.
+- Grade --> `A`
+- Performance --> `94%`
+- Structure --> `94%`
+- LCP --> `757ms` ( which must be less than `1200ms`).
+- TBT --> `0ms` ( which must be less than `150ms`).
+- CLS --> `0.14` ( which must be less than `0.1` ) needs improvement.
+
+heres the link for overall result --> https://gtmetrix.com/reports/acme-note.netlify.app/AJw4X1uB/
 

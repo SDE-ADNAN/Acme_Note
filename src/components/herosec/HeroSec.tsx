@@ -1,18 +1,22 @@
-import Button from '../common/Button'
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import splitType from 'split-type';
-import assetsConfig from '../../assets';
+import { useGSAP } from '@gsap/react'; // useGSAP hook import from gsap.
+import gsap from 'gsap'; // gsap object import
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; // gsap plugin for scroll animation handling
+import { useRef } from 'react'; // useRef hook import form react.
+import splitType from 'split-type'; // splitType library for text spliting into child dom nodes.
+import assetsConfig from '../../assets'; // assets urls object
+import Button from '../common/Button'; // Button component import
 
+// HeroSec component entry point
 const HeroSec = () => {
+    // useRef hook for the container
     const container = useRef(null);
+
+    // useGSAP hook for the animation
     useGSAP(() => {
         const ourText = new splitType('.heading_txt__hero', { types: 'words' })
         const words = ourText.words
         gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo('.hero_img', {opacity:0},  {opacity:1, duration: 2 , ease: "power4.easeInOut"});
+        gsap.fromTo('.hero_img', { opacity: 0 }, { opacity: 1, duration: 2, ease: "power4.easeInOut" });
         gsap.fromTo(
             words,
             {
@@ -45,4 +49,4 @@ const HeroSec = () => {
     )
 }
 
-export default HeroSec
+export default HeroSec;

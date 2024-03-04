@@ -57,7 +57,7 @@ const About = () => {
                 </div>
                 <div className='child2 flex-1'></div>
                 <div className='about_img_1 w-auto max-w-[508px]'>
-                    <img className='rounded-2xl ' src={RowData[0].image}></img>
+                    <img className='rounded-2xl ' src={RowData[0].image} alt={"about_img_1"}></img>
                 </div>
             </div>
 
@@ -72,7 +72,7 @@ const About = () => {
                 </div>
                 <div className='child2 flex-1'></div>
                 <div className='about_img_2 image w-auto max-w-[508px]'>
-                    <img className='rounded-2xl ' src={RowData[1].image}></img>
+                    <img className='rounded-2xl ' src={RowData[1].image} alt={"about_img_1"} ></img>
                 </div>
             </div>
 
@@ -87,7 +87,7 @@ const About = () => {
                 </div>
                 <div className='child2 flex-1'></div>
                 <div className='about_img_3 image w-auto max-w-[508px]'>
-                    <img className='rounded-2xl ' src={RowData[2].image}></img>
+                    <img className='rounded-2xl ' src={RowData[2].image} alt={"about_img_1"} ></img>
                 </div>
             </div>
         </div>

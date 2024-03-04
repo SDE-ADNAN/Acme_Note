@@ -49,5 +49,15 @@ Before doing anything and using best practices my load time measured using light
     - Cumulative Layout Shift is at --> `0.043`.
 
 ### step2 making all images available through CDN. 
+- Performance is at --> `97%`.
+  - Performance metrices are as below.
+    - FCP (First Contentful Paint) is at --> `1.4sec`.
+    - Speed Index is at --> `1.9sec`.
+    - LCP (Largest Contentful Paint) is at --> `1.7sec`.
+    - Time to Interactive is at --> `1.6sec`.
+    - TBT (Total Blocking Time) is at --> `70ms`.` 63% optimized `
+    - Cumulative Layout Shift is at --> `0.043`.
 
+### working on accessibility metric as its at 75%.
+- 
 

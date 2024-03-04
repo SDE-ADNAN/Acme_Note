@@ -7,7 +7,7 @@ interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
     return (
-        <button {...props}
+        <button aria-label="sign up" {...props}
             className={`bg-[#387ADF] w-fit text-white rounded-lg flex items-center gap-3  ${props.className ? props.className : ""} p-3 px-6 `}>
             <div>
                 <img src={assetsConfig.images.loginImg} alt='login.png'></img>

@@ -39,7 +39,7 @@ const ProductivityCTA = () => {
         <div className='py-8 flex flex-col items-center md:py-36'>
             <div className='text-4xl tracking-wide text-center w-full max-w-[700px] font-[900] md:text-5xl'  >
                 Your <span className='productivity__txt overflow-hidden underline text-[#387ADF]' ref={container} >🚀 Productivity</span> Awaits!
-                Start Note-Taking <span className=' text-[#387ADF] underline productivity__txt' ref={container}>Today</span>📝📈 </div>
+                Start Note-Taking <span className=' text-[#387ADF] underline productivity__txt' ref={container}>Today</span></div>
             <div className='mt-10'>
                 <Button />
             </div>

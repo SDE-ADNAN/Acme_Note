@@ -1,10 +1,10 @@
 import Button from '../common/Button'
-import heroImg from '../../assets/hero_img2.webp'
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import splitType from 'split-type';
+import assetsConfig from '../../assets';
 
 const HeroSec = () => {
     const container = useRef(null);
@@ -39,7 +39,7 @@ const HeroSec = () => {
                 </div>
             </div>
             <div className='w-auto max-w-[1128px]' >
-                <img className='hero_img w-fit' src={heroImg} alt="hero_img" />
+                <img className='hero_img w-fit' src={assetsConfig.images.heroBanerImg} alt="hero_img" />
             </div>
         </div>
     )
